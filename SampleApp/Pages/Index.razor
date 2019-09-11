@@ -2,4 +2,20 @@
 
 <h1>Hello, world!</h1>
 
+<RadzenButton Text="@text" Click="@ButtonClicked" />
 
+@code {
+    string text = "Hi!";
+
+    void ButtonClicked()
+    {
+        if (text.Equals("Hi!"))
+        {
+            text = "Bye";
+        }
+        else
+        {
+            text = "Hi!";
+        }
+    }
+}
